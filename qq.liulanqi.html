@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			#body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: #FCFCFC;
+			}
+			
+			#sp {
+				width: 2600px;
+				height: 650px;
+			}
+			
+			#o {
+				width: 1300px;
+				height: 650px;
+				position: relative;
+				float: left;
+				animation: 30s s linear infinite;
+			}
+			
+			@keyframes s {
+				0% {
+					right: 0;
+				}
+				100% {
+					right: 1300px;
+				}
+			}
+			
+			#s1 {
+				width: 80px;
+				height: 80px;
+				background: linear-gradient(to bottom, #ffffff, #dedede);
+				border-radius: 50%;
+				position: absolute;
+				top: 50px;
+				animation: 6s qiu infinite;
+				right: 100px;
+			}
+			
+			#s2 {
+				width: 180px;
+				height: 180px;
+				background: linear-gradient(to bottom, #ffffff, #dedede);
+				border-radius: 50%;
+				position: absolute;
+				top: 100px;
+				animation: 6s qiu infinite;
+				right: 150px
+			}
+			
+			#s3 {
+				width: 100px;
+				height: 100px;
+				background: linear-gradient(to bottom, #ffffff, #dedede);
+				border-radius: 50%;
+				position: absolute;
+				right: 400px;
+				animation: 6s qiu infinite;
+				top: 300px;
+			}
+			
+			#s4 {
+				width: 150px;
+				height: 150px;
+				background: linear-gradient(to bottom, #ffffff, #dedede);
+				border-radius: 50%;
+				position: absolute;
+				right: 700px;
+				animation: 6s qiu infinite;
+				top: 280px;
+			}
+			
+			#s5 {
+				width: 300px;
+				height: 300px;
+				background: linear-gradient(to bottom, #ffffff, #dedede);
+				border-radius: 50%;
+				position: absolute;
+				right: 800px;
+				animation: 6s qiu infinite;
+				top: 90px;
+			}
+			
+			#s6 {
+				width: 400px;
+				height: 400px;
+				background: linear-gradient(to bottom, #ffffff, #dedede);
+				border-radius: 50%;
+				position: absolute;
+				right: 180px;
+				animation: 6s qiu infinite;
+				top: 250px;
+			}
+			
+			#s7 {
+				width: 40px;
+				height: 40px;
+				background: linear-gradient(to bottom, #ffffff, #dedede);
+				border-radius: 50%;
+				position: absolute;
+				right: 800px;
+				top: 50px;
+				transform-style: preserve-3d;
+				animation: 6s qiu infinite;
+			}
+			
+			@keyframes qiu {
+				0% {
+					transform: rotatez(0deg)
+				}
+				;
+				100% {
+					transform: rotatez(360deg)
+				}
+			}
+			
+			.box {
+				width: 1000px;
+				height: 600px;
+				position: absolute;
+				top: 3%;
+				left: 15%;
+				perspective: 500px;
+				display: none;
+			}
+			
+			#box-1 {
+				width: 100%;
+				height: 150px;
+				animation: 2s box12 ease-in-out;
+			}
+			
+			@keyframes box12 {
+				from {
+					opacity: 0
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			#box1s {
+				width: 315px;
+				height: 150px;
+				float: left;
+			}
+			
+			#box2s {
+				width: 315px;
+				height: 150px;
+				float: right;
+			}
+			
+			#box-2 {
+				width: 100%;
+				height: 350px;
+				position: relative;
+				transform-style: preserve-3d;
+				animation: 2s box11 ease-in-out;
+				transform: rotatex(0deg)
+			}
+			
+			@keyframes box11 {
+				0% {
+					transform: rotateX(-20deg) translateZ(500px);
+				}
+				100% {
+					transform: rotatex(0deg)
+				}
+			}
+			
+			#box3s img {
+				position: absolute;
+				top: 0;
+				left: 10%;
+			}
+			
+			#box4s img {
+				position: absolute;
+				top: 0;
+				left: 10%;
+			}
+			
+			#pdd {
+				width: 100%;
+				height: 400px;
+				text-align: center;
+				position: absolute;
+				top: 50px;
+				transform-style: preserve-3d;
+				/*transform:  translateX(35deg);*/
+				animation: 2s ps ease-in-out;
+			}
+			
+			@keyframes ps {
+				0% {
+					transform: translatez(500px) rotateX(35deg);
+				}
+				40% {
+					transform: translatez(-500px) rotateY(45deg)
+				}
+				100% {
+					transform: translatez(0px)
+				}
+			}
+			
+			#boxsw {
+				width: 318px;
+				height: 318px;
+				transform-style: preserve-3d;
+				position: absolute;
+				/*top: -100px;*/
+				left: 350px;
+				animation: 2s im1 ease-in-out 0.5s;
+				/*transform-origin: 100% 0% ;*/
+				transform: rotatez(90deg) rotateY(90deg) translateZ(-6000px);
+			}
+			
+			.im1 {
+				position: absolute;
+			}
+			
+			@keyframes im1 {
+				form {
+					transform: rotatey(40deg) rotatex(-40deg) translateZ(-300px);
+				}
+				to {
+					transform: rotatey(0deg) rotatex(360deg) translateZ(500px);
+				}
+			}
+			
+			#pdd2 {
+				width: 100%;
+				height: 400px;
+				position: relative;
+				perspective: 500px;
+			}
+			
+			#pdd2-1 {
+				position: absolute;
+				width: 800px;
+				height: 350px;
+				border: 1px solid black;
+				left: 300px;
+				top: 200px;
+				background-color: white;
+				transform-style: preserve-3d;
+				transform: rotatex(25deg);
+				animation: 2s jjs ease-in-out;
+			}
+			
+			@keyframes jjs {
+				0% {
+					left: 1300px;
+					transform: rotateY(45deg);
+					opacity: 0;
+				}
+			}
+			
+			#pdd2-1 img {
+				position: absolute;
+			}
+			
+			#pdd2-1 p {
+				width: 100%;
+				height: 50px;
+				background: linear-gradient(to right, #ffffff, #dedede);
+				position: absolute;
+				top: 100px;
+			}
+			
+			#jj {
+				position: absolute;
+				top: 340px;
+				left: 0px;
+				animation: jj 2s ease-in-out;
+				/*transform: translatez(100px);*/
+			}
+			
+			@keyframes jj {
+				0% {
+					top: 0;
+					left: 300px;
+					transform: translateZ(1000px);
+				}
+				100% {
+					transform: translateZ(0px);
+				}
+			}
+			
+			#lu {
+				position: absolute;
+				top: 50%;
+				left: 100px;
+			}
+			
+			#lu li {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				border: 1px solid black;
+			}
+			
+			#im2 {
+				animation: 5s im2 ease-in-out infinite;
+			}
+			
+			@-webkit-keyframes im2 {
+				from {
+					transform: rotateZ(300deg);
+				}
+				to {
+					transform: rotateZ(360deg);
+				}
+			}
+			
+			#daqiu {
+				width: 100%;
+				height: 500px;
+				position: relative;
+				top: 100px;
+				perspective: 500px;
+			}
+			
+			#k1 {
+				position: absolute;
+				left: 190px;
+				top: 10px;
+				animation: 1.8s kk ease-in-out;
+			}
+			
+			#k2 {
+				position: absolute;
+				left: 217px;
+				animation: 1.5s kk ease-in-out;
+			}
+			
+			#k3 {
+				position: absolute;
+				left: 480px;
+				top: 50px;
+				animation: 2.3s kk ease-in-out;
+			}
+			
+			#k4 {
+				position: absolute;
+				left: 210px;
+				top: 350px;
+				animation: 2.4s kkk ease-in-out;
+			}
+			
+			#k5 {
+				position: absolute;
+				left: 210px;
+				top: 250px;
+				animation: 1.6s kk ease-in-out;
+			}
+			
+			@-webkit-keyframes kk {
+				0% {
+					transform: rotateX(-60deg)translatez(-600px)
+				}
+			}
+			
+			@-webkit-keyframes kkk {
+				0% {
+					left: -300px;
+					transform: rotatey(60deg) translatez(-500px);
+				}
+				100% {
+					transform: rotatey(0deg) translatez(0px);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="body">
+			<div id="sp">
+
+				<div id="o">
+					<div id="s1"></div>
+					<div id="s2"></div>
+					<div id="s3"></div>
+					<div id="s4"></div>
+					<div id="s5"></div>
+					<div id="s6"></div>
+					<div id="s7"></div>
+				</div>
+				<div id="o">
+					<div id="s1"></div>
+					<div id="s2"></div>
+					<div id="s3"></div>
+					<div id="s4"></div>
+					<div id="s5"></div>
+					<div id="s6"></div>
+					<div id="s7"></div>
+				</div>
+
+			</div>
+			<div id="kuang">
+
+				<div class="box" style="display: block;">
+					<div id="box-1">
+						<div id="box1s">
+							<img src="qqimg/title2_1.png" alt="">
+						</div>
+						<div id="box2s">
+							<img src="qqimg/btn.png" alt="">
+						</div>
+					</div>
+					<div id="box-2">
+						<div id="box3s">
+							<img src="qqimg/skin.png" alt="">
+						</div>
+						<div id="box4s">
+							<img src="qqimg/skin.gif" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div id="boxsw">
+						<img class="im1" src="qqimg/layer_main_gradient.png" alt="">
+						<img class="im1" src="qqimg/layer_main_line.png" alt="">
+						<img class="im1" src="qqimg/layer_main_num43.png" />
+						<img class="im1" id="im2" src="qqimg/layer_main_pointer.png" />
+
+					</div>
+					<div id="pdd">
+						<img src="qqimg/title1_1.png" alt=""></br>
+						<img src="qqimg/title1_2.png" alt="">
+					</div>
+
+				</div>
+
+				<div class="box">
+					<div id="pdd2">
+						<div id='pdd2-1'>
+							<img src="qqimg/p3ui_shadow.png" alt="">
+							<img src="qqimg/p3ui_tab.png" alt="">
+							<p></p>
+						</div>
+						<img id="jj" src="qqimg/title3.png" alt="">
+
+					</div>
+				</div>
+		
+
+			<div class="box">
+				<div id="daqiu">
+					<img id="k1" src="qqimg/p2pop1.png" />
+					<img id="k2" src="qqimg/p2pop3.png" />
+					<img id="k3" src="qqimg/p2pop4.png" />
+					<img id="k5" src="qqimg/p2pop2.png" />
+					<img id="k4" src="qqimg/p2t1.png" />
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jq.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		// 滚轮
+		var degree = 0;
+		var lock = true;
+
+		$('#body').mousewheel(function(ev, datale) {
+					if (!lock) return;
+					degree -= datale
+					if (degree == 4) {
+						//				$("#sp").children().
+
+						degree = 0;
+									} else if (degree == -1) {
+										degree = 3
+									}
+						console.log(degree)
+						$(".box").eq(degree).show().siblings().hide()
+
+						lock = false;
+						setTimeout(function() {
+							lock = true;
+						}, 1000)
+
+					})
+	</script>
+
+</html>
